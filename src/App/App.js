@@ -27,6 +27,7 @@ class App extends Component {
           return notesRes.json().then(e => Promise.reject(e))
         if (!foldersRes.ok)
           return foldersRes.json().then(e => Promise.reject(e))
+        console.log(`${config.API_ENDPOINT}`)
 
         return Promise.all([
           notesRes.json(),
